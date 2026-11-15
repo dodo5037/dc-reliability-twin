@@ -1,0 +1,84 @@
+{
+ "N": {
+  "cooling": {
+   "design": "N",
+   "years": 1000000,
+   "shortfall_hours_per_year": 3.0752686797713777,
+   "events_per_year": 0.280516,
+   "prob_event_in_a_year": 0.244761,
+   "hours_above_27_per_year": 3.069600478882396,
+   "hours_above_32_per_year": 3.055530458596991,
+   "unavailability_mc": 0.00035105806846705224,
+   "unavailability_analytical": 0.00035232991103584244,
+   "events": 280516
+  },
+  "power": {
+   "design": "N",
+   "years": 1000000,
+   "loss_events_per_year": 0.071161,
+   "prob_loss_in_a_year": 0.06868806116547643,
+   "loss_hours_per_year": 0.24728985706209242,
+   "events_from_utility_and_generators": 1196,
+   "events_from_ups": 18843,
+   "events_from_ats": 51122,
+   "analytical_events_per_year": 0.07112744359418485
+  }
+ },
+ "N+1": {
+  "cooling": {
+   "design": "N+1",
+   "years": 1000000,
+   "shortfall_hours_per_year": 0.0006842425549477339,
+   "events_per_year": 0.000119,
+   "prob_event_in_a_year": 0.000119,
+   "hours_above_27_per_year": 0.0006820810161327846,
+   "hours_above_32_per_year": 0.000676686890561354,
+   "unavailability_mc": 7.81098807017961e-08,
+   "unavailability_analytical": 8.703780618457557e-08,
+   "events": 119
+  },
+  "power": {
+   "design": "N+1",
+   "years": 1000000,
+   "loss_events_per_year": 1.6e-05,
+   "prob_loss_in_a_year": 1.5999872000738158e-05,
+   "loss_hours_per_year": 1.1643270082079492e-05,
+   "events_from_utility_and_generators": 13,
+   "events_from_ups": 0,
+   "events_from_ats": 3,
+   "analytical_events_per_year": 2.0979605232917356e-05
+  }
+ },
+ "2N": {
+  "cooling": {
+   "design": "2N",
+   "years": 1000000,
+   "shortfall_hours_per_year": 0.0,
+   "events_per_year": 0.0,
+   "prob_event_in_a_year": 0.0,
+   "hours_above_27_per_year": 0.0,
+   "hours_above_32_per_year": 0.0,
+   "unavailability_mc": 0.0,
+   "unavailability_analytical": 1.9737989020995883e-11,
+   "events": 0
+  },
+  "power": {
+   "design": "2N",
+   "years": 1000000,
+   "loss_events_per_year": 4e-06,
+   "prob_loss_in_a_year": 3.9999919999589295e-06,
+   "loss_hours_per_year": 1.072326698899269e-05,
+   "events_from_utility_and_generators": 0,
+   "events_from_ups": 0,
+   "events_from_ats": 4,
+   "analytical_events_per_year": 2.702354506698539e-06
+  }
+ },
+ "unit_availability": {
+  "chiller": 0.9998297454299108,
+  "crah": 0.9999970365384625,
+  "generator": 0.9997423517878369,
+  "ups": 0.9999978584520748,
+  "ats": 0.9999760511443376
+ }
+}
