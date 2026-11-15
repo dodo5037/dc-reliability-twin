@@ -41,6 +41,7 @@ class Facility:
     chiller_derate_per_k: float = 0.012    # air-cooled chiller loses 1.2% of capacity per K of outdoor air above 35 C
     chiller_rating_c: float = 35.0         # outdoor temperature at which unit_kw is rated
     thermal_mass_kj_per_k: float = 12800.0 # hall air (2,400 m3) plus the part of the equipment that warms in the first minutes
+    it_shutdown_c: float = 40.0            # servers shut themselves down at this inlet temperature to protect hardware
     # --- power (ASSUMPTIONS) ---
     ups_battery_min: float = 5.0           # battery run time at full load
     generator_start_s: float = 30.0        # time for generators to start and take load
@@ -74,9 +75,17 @@ class Facility:
         """Capacity of one chiller at this outdoor temperature (falls in heat, rises a little in cool air)."""
         return self.chillers.unit_kw * (1 - self.chiller_derate_per_k * (t_out - self.chiller_rating_c))
 
-    def cooling_capacity_kw(self, t_out, chillers_up, crahs_up):
+    def crah_unit_kw(self, inlet_c=None):
+        """Capacity of one CRAH. A coil moves heat in proportion to the temperature difference between the
+        return air and the chilled water, so a hotter hall gets more out of the same coil (ASSUMPTION: linear)."""
+        if inlet_c is None:
+            return self.crahs.unit_kw
+        air_dt, chw = cooling.INPUTS["air_dt_k"][0], cooling.INPUTS["chw_supply_c"][0]
+        return self.crahs.unit_kw * (inlet_c + air_dt - chw) / (self.supply_air_c + air_dt - chw)
+
+    def cooling_capacity_kw(self, t_out, chillers_up, crahs_up, inlet_c=None):
         """The weaker of the two stages sets what the hall can reject."""
-        return min(chillers_up * self.chiller_unit_kw(t_out), crahs_up * self.crahs.unit_kw)
+        return min(chillers_up * self.chiller_unit_kw(t_out), crahs_up * self.crah_unit_kw(inlet_c))
 
     def cooling_deficit_kw(self, t_out, chillers_up, crahs_up):
         return max(0.0, self.cooling_load_kw(t_out) - self.cooling_capacity_kw(t_out, chillers_up, crahs_up))

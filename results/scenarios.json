@@ -1,0 +1,230 @@
+{
+ "table": [
+  {
+   "scenario": "CRAH failure, N, no standby",
+   "peak_c": 30.5,
+   "to_27": "2.2 min",
+   "to_32": "never",
+   "minutes_above_27": 41.0,
+   "minutes_above_32": 0.0,
+   "it_power_lost": false,
+   "thermal_shutdown": "no"
+  },
+  {
+   "scenario": "CRAH failure, N+1, standby works",
+   "peak_c": 26.1,
+   "to_27": "never",
+   "to_32": "never",
+   "minutes_above_27": 0.0,
+   "minutes_above_32": 0.0,
+   "it_power_lost": false,
+   "thermal_shutdown": "no"
+  },
+  {
+   "scenario": "CRAH failure, N+1, standby hidden fault",
+   "peak_c": 30.1,
+   "to_27": "2.2 min",
+   "to_32": "never",
+   "minutes_above_27": 12.5,
+   "minutes_above_32": 0.0,
+   "it_power_lost": false,
+   "thermal_shutdown": "no"
+  },
+  {
+   "scenario": "Utility loss + one generator fails, N",
+   "peak_c": 40.4,
+   "to_27": "0.5 min",
+   "to_32": "1.3 min",
+   "minutes_above_27": 42.7,
+   "minutes_above_32": 41.8,
+   "it_power_lost": true,
+   "thermal_shutdown": "after 2.8 min"
+  },
+  {
+   "scenario": "Utility loss + one generator fails, N+1",
+   "peak_c": 40.4,
+   "to_27": "0.5 min",
+   "to_32": "1.3 min",
+   "minutes_above_27": 6.7,
+   "minutes_above_32": 5.2,
+   "it_power_lost": false,
+   "thermal_shutdown": "after 2.8 min"
+  },
+  {
+   "scenario": "Utility loss + one generator fails, N+1, 6 min chilled-water tank",
+   "peak_c": 27.7,
+   "to_27": "0.5 min",
+   "to_32": "never",
+   "minutes_above_27": 0.3,
+   "minutes_above_32": 0.0,
+   "it_power_lost": false,
+   "thermal_shutdown": "no"
+  },
+  {
+   "scenario": "Utility loss + one generator fails, 2N, 6 min chilled-water tank",
+   "peak_c": 27.7,
+   "to_27": "0.5 min",
+   "to_32": "never",
+   "minutes_above_27": 0.2,
+   "minutes_above_32": 0.0,
+   "it_power_lost": false,
+   "thermal_shutdown": "no"
+  },
+  {
+   "scenario": "Common-mode chiller trip, N+1",
+   "peak_c": 40.4,
+   "to_27": "0.5 min",
+   "to_32": "1.3 min",
+   "minutes_above_27": 16.2,
+   "minutes_above_32": 14.7,
+   "it_power_lost": false,
+   "thermal_shutdown": "after 2.8 min"
+  },
+  {
+   "scenario": "Common-mode chiller trip, 2N",
+   "peak_c": 40.4,
+   "to_27": "0.5 min",
+   "to_32": "1.3 min",
+   "minutes_above_27": 15.8,
+   "minutes_above_32": 14.5,
+   "it_power_lost": false,
+   "thermal_shutdown": "after 2.8 min"
+  }
+ ],
+ "logs": {
+  "CRAH failure, N, no standby": [
+   [
+    2,
+    "CRAH unit trips (fan motor failure)"
+   ],
+   [
+    32.0,
+    "Unit repaired and returned to service"
+   ]
+  ],
+  "CRAH failure, N+1, standby works": [
+   [
+    2,
+    "CRAH unit trips (fan motor failure)"
+   ],
+   [
+    3.0,
+    "Standby CRAH is running and cooling"
+   ]
+  ],
+  "CRAH failure, N+1, standby hidden fault": [
+   [
+    2,
+    "CRAH unit trips (fan motor failure)"
+   ],
+   [
+    3.0,
+    "Standby CRAH starts but does not cool (hidden fault: valve closed)"
+   ],
+   [
+    14.0,
+    "Technician opens the valve; standby CRAH cooling"
+   ]
+  ],
+  "Utility loss + one generator fails, N": [
+   [
+    2,
+    "Utility power lost. IT rides on UPS battery; fans, pumps and chillers stop"
+   ],
+   [
+    2.5,
+    "Only 1 generator starts: 800 kW cannot carry 1508 kW"
+   ],
+   [
+    4.833333333333333,
+    "Inlet reaches 40 C: servers shut down to protect hardware"
+   ],
+   [
+    7.0,
+    "UPS battery exhausted. IT load loses power"
+   ]
+  ],
+  "Utility loss + one generator fails, N+1": [
+   [
+    2,
+    "Utility power lost. IT rides on UPS battery; fans, pumps and chillers stop"
+   ],
+   [
+    2.5,
+    "2 of 3 generators start (one fails) and take the load; fans and pumps restart"
+   ],
+   [
+    4.833333333333333,
+    "Inlet reaches 40 C: servers shut down to protect hardware"
+   ],
+   [
+    7.5,
+    "Chillers restarted and cooling"
+   ]
+  ],
+  "Utility loss + one generator fails, N+1, 6 min chilled-water tank": [
+   [
+    2,
+    "Utility power lost. IT rides on UPS battery; fans, pumps and chillers stop"
+   ],
+   [
+    2.5,
+    "2 of 3 generators start (one fails) and take the load; fans and pumps restart; storage tank supplies chilled water for 6 minutes"
+   ],
+   [
+    7.5,
+    "Chillers restarted and cooling"
+   ]
+  ],
+  "Utility loss + one generator fails, 2N, 6 min chilled-water tank": [
+   [
+    2,
+    "Utility power lost. IT rides on UPS battery; fans, pumps and chillers stop"
+   ],
+   [
+    2.5,
+    "3 of 4 generators start (one fails) and take the load; fans and pumps restart; storage tank supplies chilled water for 6 minutes"
+   ],
+   [
+    7.5,
+    "Chillers restarted and cooling"
+   ]
+  ],
+  "Common-mode chiller trip, N+1": [
+   [
+    2,
+    "Shared control fault trips ALL chillers together"
+   ],
+   [
+    4.833333333333333,
+    "Inlet reaches 40 C: servers shut down to protect hardware"
+   ],
+   [
+    12.0,
+    "Fault cleared by the operator; chillers restarting"
+   ],
+   [
+    17.0,
+    "Chillers back and cooling"
+   ]
+  ],
+  "Common-mode chiller trip, 2N": [
+   [
+    2,
+    "Shared control fault trips ALL chillers together"
+   ],
+   [
+    4.833333333333333,
+    "Inlet reaches 40 C: servers shut down to protect hardware"
+   ],
+   [
+    12.0,
+    "Fault cleared by the operator; chillers restarting"
+   ],
+   [
+    17.0,
+    "Chillers back and cooling"
+   ]
+  ]
+ }
+}

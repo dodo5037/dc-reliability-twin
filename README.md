@@ -9,8 +9,8 @@ An educational model of a fictional 1 MW IT hall. **Not an engineering design.**
 | 1 | Facility model: power chain, cooling, N / N+1 / 2N, thermal response (`twin/facility.py`, `twin/cooling.py`) | Done |
 | 2 | Reliability engine: Monte Carlo of failures and repairs, checked against the analytical answer (`twin/reliability.py`) | Done |
 | 3 | Maintenance-window optimizer: lowest-risk hours to take each unit offline, against a fixed monthly schedule (`twin/maintenance.py`) | Done |
-| 4 | Scenario lab | Next |
-| 5 | Real telemetry from a home server | Planned |
+| 4 | Scenario lab: inlet temperature minute by minute after a failure (`twin/scenarios.py`) | Done |
+| 5 | Real telemetry from a home server | Next |
 | 6 | Automatic incident report | Planned |
 | 7 | Dashboard | Planned |
 
@@ -46,6 +46,26 @@ Risk of a maintenance hour = chance that one of the remaining units fails in tha
 - The schedule is chosen with hindsight on the 2024 weather. A real planner has a forecast, so these reductions are an upper bound.
 
 **Assumptions:** job counts and lengths (4 x 8 h per chiller, 2 x 4 h per CRAH); 2 hours to abort a job and restore the unit; constant IT load.
+
+### Module 4: what a failure looks like, minute by minute (46 C outdoor, all hypothetical)
+
+![Scenarios](results/scenarios.png)
+
+| Scenario | Peak inlet | Reaches 27 C | Reaches 32 C | Outcome |
+|---|---|---|---|---|
+| CRAH fails, N (no standby) | 30.5 C | after 2.2 min | never | Settles at 30.5 C until repaired |
+| CRAH fails, N+1, standby works | 26.1 C | never | never | No impact |
+| CRAH fails, N+1, standby has a hidden fault | 30.1 C | after 2.2 min | never | 12.5 min above 27 C, until a technician fixes it |
+| Utility loss, one generator fails to start, N | 40 C | after 0.5 min | after 1.3 min | IT loses power when the battery runs out |
+| Same, N+1, no chilled-water storage | 40 C | after 0.5 min | after 1.3 min | Power holds, but servers overheat and shut down after 2.8 min while the chillers restart |
+| Same, N+1, 6-minute chilled-water tank | 27.7 C | after 0.5 min | never | Rides through |
+| All chillers trip together (common mode), N+1 or 2N | 40 C | after 0.5 min | after 1.3 min | Servers shut down after 2.8 min; extra units make no difference |
+
+- **A hidden fault erases redundancy.** An N+1 hall whose standby does not cool behaves exactly like an N hall until someone notices.
+- **After a power cut, the chillers are the gap, not the generators.** Generators take the load in 30 seconds; chillers need 5 minutes to restart. Without stored chilled water the hall overheats in under 3 minutes even though power is back.
+- **Redundancy does nothing against a shared failure.** N+1 and 2N give the same result when one fault stops every chiller.
+
+**Assumptions:** thermal mass 12,800 kJ/K; a standby unit cools 1 minute after a failure; a technician needs 12 minutes to find and fix a hidden fault; generators take load in 30 s; chillers restart in 5 min; fans, pumps and chillers are not on UPS; servers shut down at a 40 C inlet; a CRAH coil's capacity grows linearly with the gap between return air and chilled water.
 
 **Failure data:** US Army TM 5-698-5 (22 July 2006), Appendix B: chiller H10-000 (0.1182 failures a year, 12.62 h repair, p. B-4), air handling unit H5-000 (0.0110, 2.36 h, p. B-2), standby diesel generator E18-122 (0.1235, 18.28 h, p. B-6), UPS E39-200 (0.00938, 2.00 h, p. B-12), automatic transfer switch E34-100 (0.05117, 4.10 h, p. B-9). **Utility:** DEWA reports 0.94 customer minutes lost per customer in 2024 (DEWA Integrated Report 2024).
 
