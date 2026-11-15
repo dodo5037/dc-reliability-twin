@@ -1,0 +1,1157 @@
+{
+ "Fixed: 09:00 on a set day each month": {
+  "risk_kwh_per_year": 2.2184797699838246,
+  "reduction_vs_fixed": 0.0,
+  "by_kind": {
+   "chiller": 2.122129392751926,
+   "crah": 0.09635037723189899
+  },
+  "avg_temp_c": 31.658823529411766,
+  "jobs": [
+   {
+    "kind": "chiller",
+    "unit": 1,
+    "job": 1,
+    "start": "2024-01-05 09:00",
+    "hours": 8,
+    "avg_temp_c": 23.7,
+    "max_temp_c": 25.1,
+    "risk_kwh": 0.1436987311311536
+   },
+   {
+    "kind": "chiller",
+    "unit": 2,
+    "job": 1,
+    "start": "2024-02-05 09:00",
+    "hours": 8,
+    "avg_temp_c": 22.6,
+    "max_temp_c": 24.0,
+    "risk_kwh": 0.13970098044622212
+   },
+   {
+    "kind": "chiller",
+    "unit": 3,
+    "job": 1,
+    "start": "2024-03-05 09:00",
+    "hours": 8,
+    "avg_temp_c": 24.5,
+    "max_temp_c": 26.0,
+    "risk_kwh": 0.14676383524074266
+   },
+   {
+    "kind": "chiller",
+    "unit": 1,
+    "job": 2,
+    "start": "2024-04-05 09:00",
+    "hours": 8,
+    "avg_temp_c": 27.8,
+    "max_temp_c": 29.0,
+    "risk_kwh": 0.16075191469279743
+   },
+   {
+    "kind": "chiller",
+    "unit": 2,
+    "job": 2,
+    "start": "2024-05-05 09:00",
+    "hours": 8,
+    "avg_temp_c": 35.4,
+    "max_temp_c": 37.0,
+    "risk_kwh": 0.19294441332293447
+   },
+   {
+    "kind": "chiller",
+    "unit": 3,
+    "job": 2,
+    "start": "2024-06-05 09:00",
+    "hours": 8,
+    "avg_temp_c": 36.1,
+    "max_temp_c": 37.4,
+    "risk_kwh": 0.1962038188023865
+   },
+   {
+    "kind": "chiller",
+    "unit": 1,
+    "job": 3,
+    "start": "2024-07-05 09:00",
+    "hours": 8,
+    "avg_temp_c": 37.7,
+    "max_temp_c": 39.0,
+    "risk_kwh": 0.20293636126813996
+   },
+   {
+    "kind": "chiller",
+    "unit": 2,
+    "job": 3,
+    "start": "2024-08-05 09:00",
+    "hours": 8,
+    "avg_temp_c": 38.7,
+    "max_temp_c": 41.0,
+    "risk_kwh": 0.20715755852841392
+   },
+   {
+    "kind": "chiller",
+    "unit": 3,
+    "job": 3,
+    "start": "2024-09-05 09:00",
+    "hours": 8,
+    "avg_temp_c": 37.8,
+    "max_temp_c": 39.9,
+    "risk_kwh": 0.2032569585284139
+   },
+   {
+    "kind": "chiller",
+    "unit": 1,
+    "job": 4,
+    "start": "2024-10-05 09:00",
+    "hours": 8,
+    "avg_temp_c": 34.4,
+    "max_temp_c": 35.1,
+    "risk_kwh": 0.1885629174325235
+   },
+   {
+    "kind": "chiller",
+    "unit": 2,
+    "job": 4,
+    "start": "2024-11-05 09:00",
+    "hours": 8,
+    "avg_temp_c": 33.8,
+    "max_temp_c": 35.4,
+    "risk_kwh": 0.18610500510375635
+   },
+   {
+    "kind": "chiller",
+    "unit": 3,
+    "job": 4,
+    "start": "2024-12-05 09:00",
+    "hours": 8,
+    "avg_temp_c": 26.2,
+    "max_temp_c": 27.0,
+    "risk_kwh": 0.1540468982544413
+   },
+   {
+    "kind": "crah",
+    "unit": 1,
+    "job": 1,
+    "start": "2024-01-12 09:00",
+    "hours": 4,
+    "avg_temp_c": 21.3,
+    "max_temp_c": 24.0,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 2,
+    "job": 1,
+    "start": "2024-02-12 09:00",
+    "hours": 4,
+    "avg_temp_c": 19.4,
+    "max_temp_c": 22.0,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 3,
+    "job": 1,
+    "start": "2024-03-12 09:00",
+    "hours": 4,
+    "avg_temp_c": 25.4,
+    "max_temp_c": 26.0,
+    "risk_kwh": 0.00919262676428579
+   },
+   {
+    "kind": "crah",
+    "unit": 4,
+    "job": 1,
+    "start": "2024-04-12 09:00",
+    "hours": 4,
+    "avg_temp_c": 32.5,
+    "max_temp_c": 34.0,
+    "risk_kwh": 0.009611530873874832
+   },
+   {
+    "kind": "crah",
+    "unit": 5,
+    "job": 1,
+    "start": "2024-05-12 09:00",
+    "hours": 4,
+    "avg_temp_c": 36.5,
+    "max_temp_c": 40.0,
+    "risk_kwh": 0.009857147312230996
+   },
+   {
+    "kind": "crah",
+    "unit": 1,
+    "job": 2,
+    "start": "2024-07-12 09:00",
+    "hours": 4,
+    "avg_temp_c": 38.5,
+    "max_temp_c": 41.0,
+    "risk_kwh": 0.00997317470949127
+   },
+   {
+    "kind": "crah",
+    "unit": 2,
+    "job": 2,
+    "start": "2024-08-12 09:00",
+    "hours": 4,
+    "avg_temp_c": 39.8,
+    "max_temp_c": 42.0,
+    "risk_kwh": 0.010054544572504967
+   },
+   {
+    "kind": "crah",
+    "unit": 3,
+    "job": 2,
+    "start": "2024-09-12 09:00",
+    "hours": 4,
+    "avg_temp_c": 40.1,
+    "max_temp_c": 43.0,
+    "risk_kwh": 0.010074133613600858
+   },
+   {
+    "kind": "crah",
+    "unit": 4,
+    "job": 2,
+    "start": "2024-10-12 09:00",
+    "hours": 4,
+    "avg_temp_c": 35.1,
+    "max_temp_c": 38.0,
+    "risk_kwh": 0.009772763750587159
+   },
+   {
+    "kind": "crah",
+    "unit": 5,
+    "job": 2,
+    "start": "2024-11-12 09:00",
+    "hours": 4,
+    "avg_temp_c": 30.4,
+    "max_temp_c": 32.0,
+    "risk_kwh": 0.009489476079354282
+   }
+  ]
+ },
+ "Same month, best day, day shift (07:00-17:00)": {
+  "risk_kwh_per_year": 1.9776402138194413,
+  "reduction_vs_fixed": 0.10856062760767893,
+  "by_kind": {
+   "chiller": 1.8844858639848026,
+   "crah": 0.09315434983463872
+  },
+  "avg_temp_c": 26.391176470588235,
+  "jobs": [
+   {
+    "kind": "chiller",
+    "unit": 1,
+    "job": 1,
+    "start": "2024-01-12 07:00",
+    "hours": 8,
+    "avg_temp_c": 20.8,
+    "max_temp_c": 25.0,
+    "risk_kwh": 0.13335380236403035
+   },
+   {
+    "kind": "chiller",
+    "unit": 2,
+    "job": 1,
+    "start": "2024-02-11 09:00",
+    "hours": 8,
+    "avg_temp_c": 19.6,
+    "max_temp_c": 21.0,
+    "risk_kwh": 0.1289107777064961
+   },
+   {
+    "kind": "chiller",
+    "unit": 3,
+    "job": 1,
+    "start": "2024-03-09 09:00",
+    "hours": 8,
+    "avg_temp_c": 18.8,
+    "max_temp_c": 20.0,
+    "risk_kwh": 0.12587319962430432
+   },
+   {
+    "kind": "chiller",
+    "unit": 1,
+    "job": 2,
+    "start": "2024-04-16 09:00",
+    "hours": 8,
+    "avg_temp_c": 21.4,
+    "max_temp_c": 23.3,
+    "risk_kwh": 0.13530329277498926
+   },
+   {
+    "kind": "chiller",
+    "unit": 2,
+    "job": 2,
+    "start": "2024-05-02 07:00",
+    "hours": 8,
+    "avg_temp_c": 24.1,
+    "max_temp_c": 25.6,
+    "risk_kwh": 0.1452353311311536
+   },
+   {
+    "kind": "chiller",
+    "unit": 3,
+    "job": 2,
+    "start": "2024-06-05 07:00",
+    "hours": 8,
+    "avg_temp_c": 34.8,
+    "max_temp_c": 37.4,
+    "risk_kwh": 0.190433068117455
+   },
+   {
+    "kind": "chiller",
+    "unit": 1,
+    "job": 3,
+    "start": "2024-07-01 07:00",
+    "hours": 8,
+    "avg_temp_c": 36.0,
+    "max_temp_c": 39.0,
+    "risk_kwh": 0.1956160571585509
+   },
+   {
+    "kind": "chiller",
+    "unit": 2,
+    "job": 3,
+    "start": "2024-08-21 07:00",
+    "hours": 8,
+    "avg_temp_c": 35.4,
+    "max_temp_c": 39.0,
+    "risk_kwh": 0.19289098044622213
+   },
+   {
+    "kind": "chiller",
+    "unit": 3,
+    "job": 3,
+    "start": "2024-09-10 07:00",
+    "hours": 8,
+    "avg_temp_c": 34.2,
+    "max_temp_c": 38.1,
+    "risk_kwh": 0.18770799140512626
+   },
+   {
+    "kind": "chiller",
+    "unit": 1,
+    "job": 4,
+    "start": "2024-10-30 07:00",
+    "hours": 8,
+    "avg_temp_c": 29.8,
+    "max_temp_c": 32.7,
+    "risk_kwh": 0.16918297496677007
+   },
+   {
+    "kind": "chiller",
+    "unit": 2,
+    "job": 4,
+    "start": "2024-11-30 07:00",
+    "hours": 8,
+    "avg_temp_c": 25.0,
+    "max_temp_c": 27.0,
+    "risk_kwh": 0.14925413113115363
+   },
+   {
+    "kind": "chiller",
+    "unit": 3,
+    "job": 4,
+    "start": "2024-12-23 07:00",
+    "hours": 8,
+    "avg_temp_c": 20.1,
+    "max_temp_c": 25.0,
+    "risk_kwh": 0.1307242571585509
+   },
+   {
+    "kind": "crah",
+    "unit": 1,
+    "job": 1,
+    "start": "2024-01-01 07:00",
+    "hours": 4,
+    "avg_temp_c": 22.2,
+    "max_temp_c": 24.0,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 2,
+    "job": 1,
+    "start": "2024-02-01 07:00",
+    "hours": 4,
+    "avg_temp_c": 21.4,
+    "max_temp_c": 22.6,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 3,
+    "job": 1,
+    "start": "2024-03-01 07:00",
+    "hours": 4,
+    "avg_temp_c": 20.0,
+    "max_temp_c": 20.7,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 4,
+    "job": 1,
+    "start": "2024-04-16 07:00",
+    "hours": 4,
+    "avg_temp_c": 21.6,
+    "max_temp_c": 23.0,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 5,
+    "job": 1,
+    "start": "2024-05-02 08:00",
+    "hours": 4,
+    "avg_temp_c": 23.9,
+    "max_temp_c": 25.0,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 1,
+    "job": 2,
+    "start": "2024-07-06 07:00",
+    "hours": 4,
+    "avg_temp_c": 33.5,
+    "max_temp_c": 35.6,
+    "risk_kwh": 0.009676325394422777
+   },
+   {
+    "kind": "crah",
+    "unit": 2,
+    "job": 2,
+    "start": "2024-08-21 07:00",
+    "hours": 4,
+    "avg_temp_c": 32.9,
+    "max_temp_c": 34.9,
+    "risk_kwh": 0.009635640462915925
+   },
+   {
+    "kind": "crah",
+    "unit": 3,
+    "job": 2,
+    "start": "2024-09-27 07:00",
+    "hours": 4,
+    "avg_temp_c": 31.2,
+    "max_temp_c": 34.4,
+    "risk_kwh": 0.009537695257436474
+   },
+   {
+    "kind": "crah",
+    "unit": 4,
+    "job": 2,
+    "start": "2024-10-30 07:00",
+    "hours": 4,
+    "avg_temp_c": 27.5,
+    "max_temp_c": 31.1,
+    "risk_kwh": 0.009314681558806338
+   },
+   {
+    "kind": "crah",
+    "unit": 5,
+    "job": 2,
+    "start": "2024-11-30 07:00",
+    "hours": 4,
+    "avg_temp_c": 23.1,
+    "max_temp_c": 26.0,
+    "risk_kwh": 0.009177558271135105
+   }
+  ]
+ },
+ "Same month, best hours, any time of day": {
+  "risk_kwh_per_year": 1.847556274093414,
+  "reduction_vs_fixed": 0.1671971504581784,
+  "by_kind": {
+   "chiller": 1.7547605543957614,
+   "crah": 0.09279571969765242
+  },
+  "avg_temp_c": 24.455882352941178,
+  "jobs": [
+   {
+    "kind": "chiller",
+    "unit": 1,
+    "job": 1,
+    "start": "2024-01-12 02:00",
+    "hours": 8,
+    "avg_temp_c": 16.7,
+    "max_temp_c": 18.0,
+    "risk_kwh": 0.1183925968845783
+   },
+   {
+    "kind": "chiller",
+    "unit": 2,
+    "job": 1,
+    "start": "2024-02-05 02:00",
+    "hours": 8,
+    "avg_temp_c": 16.7,
+    "max_temp_c": 19.0,
+    "risk_kwh": 0.11848327085718104
+   },
+   {
+    "kind": "chiller",
+    "unit": 3,
+    "job": 1,
+    "start": "2024-03-03 01:00",
+    "hours": 8,
+    "avg_temp_c": 16.5,
+    "max_temp_c": 17.8,
+    "risk_kwh": 0.11757653113115364
+   },
+   {
+    "kind": "chiller",
+    "unit": 1,
+    "job": 2,
+    "start": "2024-04-16 16:00",
+    "hours": 8,
+    "avg_temp_c": 20.7,
+    "max_temp_c": 21.3,
+    "risk_kwh": 0.1328550955147153
+   },
+   {
+    "kind": "chiller",
+    "unit": 2,
+    "job": 2,
+    "start": "2024-05-02 06:00",
+    "hours": 8,
+    "avg_temp_c": 24.1,
+    "max_temp_c": 25.6,
+    "risk_kwh": 0.1452353311311536
+   },
+   {
+    "kind": "chiller",
+    "unit": 3,
+    "job": 2,
+    "start": "2024-06-06 00:00",
+    "hours": 8,
+    "avg_temp_c": 30.3,
+    "max_temp_c": 31.4,
+    "risk_kwh": 0.17135753113115362
+   },
+   {
+    "kind": "chiller",
+    "unit": 1,
+    "job": 3,
+    "start": "2024-07-06 01:00",
+    "hours": 8,
+    "avg_temp_c": 32.3,
+    "max_temp_c": 33.1,
+    "risk_kwh": 0.17974649277498925
+   },
+   {
+    "kind": "chiller",
+    "unit": 2,
+    "job": 3,
+    "start": "2024-08-21 02:00",
+    "hours": 8,
+    "avg_temp_c": 32.4,
+    "max_temp_c": 33.0,
+    "risk_kwh": 0.1800136571585509
+   },
+   {
+    "kind": "chiller",
+    "unit": 3,
+    "job": 3,
+    "start": "2024-09-27 02:00",
+    "hours": 8,
+    "avg_temp_c": 30.9,
+    "max_temp_c": 32.0,
+    "risk_kwh": 0.1735482790763591
+   },
+   {
+    "kind": "chiller",
+    "unit": 1,
+    "job": 4,
+    "start": "2024-10-31 01:00",
+    "hours": 8,
+    "avg_temp_c": 26.9,
+    "max_temp_c": 28.7,
+    "risk_kwh": 0.15655662428183856
+   },
+   {
+    "kind": "chiller",
+    "unit": 2,
+    "job": 4,
+    "start": "2024-11-30 02:00",
+    "hours": 8,
+    "avg_temp_c": 23.3,
+    "max_temp_c": 24.2,
+    "risk_kwh": 0.14237586263800295
+   },
+   {
+    "kind": "chiller",
+    "unit": 3,
+    "job": 4,
+    "start": "2024-12-23 02:00",
+    "hours": 8,
+    "avg_temp_c": 16.8,
+    "max_temp_c": 18.0,
+    "risk_kwh": 0.11861928181608515
+   },
+   {
+    "kind": "crah",
+    "unit": 1,
+    "job": 1,
+    "start": "2024-01-01 04:00",
+    "hours": 4,
+    "avg_temp_c": 22.2,
+    "max_temp_c": 23.0,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 2,
+    "job": 1,
+    "start": "2024-02-01 00:00",
+    "hours": 4,
+    "avg_temp_c": 23.0,
+    "max_temp_c": 24.0,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 3,
+    "job": 1,
+    "start": "2024-03-01 00:00",
+    "hours": 4,
+    "avg_temp_c": 19.4,
+    "max_temp_c": 20.0,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 4,
+    "job": 1,
+    "start": "2024-04-01 02:00",
+    "hours": 4,
+    "avg_temp_c": 23.5,
+    "max_temp_c": 24.5,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 5,
+    "job": 1,
+    "start": "2024-05-02 08:00",
+    "hours": 4,
+    "avg_temp_c": 23.9,
+    "max_temp_c": 25.0,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 1,
+    "job": 2,
+    "start": "2024-07-05 04:00",
+    "hours": 4,
+    "avg_temp_c": 31.7,
+    "max_temp_c": 32.1,
+    "risk_kwh": 0.00956481854510771
+   },
+   {
+    "kind": "crah",
+    "unit": 2,
+    "job": 2,
+    "start": "2024-08-21 05:00",
+    "hours": 4,
+    "avg_temp_c": 31.9,
+    "max_temp_c": 32.0,
+    "risk_kwh": 0.009576873339628256
+   },
+   {
+    "kind": "crah",
+    "unit": 3,
+    "job": 2,
+    "start": "2024-09-27 05:00",
+    "hours": 4,
+    "avg_temp_c": 30.4,
+    "max_temp_c": 31.0,
+    "risk_kwh": 0.009486462380724146
+   },
+   {
+    "kind": "crah",
+    "unit": 4,
+    "job": 2,
+    "start": "2024-10-30 05:00",
+    "hours": 4,
+    "avg_temp_c": 25.4,
+    "max_temp_c": 26.0,
+    "risk_kwh": 0.00919262676428579
+   },
+   {
+    "kind": "crah",
+    "unit": 5,
+    "job": 2,
+    "start": "2024-11-09 05:00",
+    "hours": 4,
+    "avg_temp_c": 24.9,
+    "max_temp_c": 25.0,
+    "risk_kwh": 0.00916248977798442
+   }
+  ]
+ },
+ "Any month (60 days apart per unit), day shift": {
+  "risk_kwh_per_year": 1.8197969288879343,
+  "reduction_vs_fixed": 0.17970992861422264,
+  "by_kind": {
+   "chiller": 1.7281720311080901,
+   "crah": 0.0916248977798442
+  },
+  "avg_temp_c": 22.805882352941175,
+  "jobs": [
+   {
+    "kind": "chiller",
+    "unit": 1,
+    "job": 1,
+    "start": "2024-03-09 09:00",
+    "hours": 8,
+    "avg_temp_c": 18.8,
+    "max_temp_c": 20.0,
+    "risk_kwh": 0.12587319962430432
+   },
+   {
+    "kind": "chiller",
+    "unit": 2,
+    "job": 1,
+    "start": "2024-02-11 09:00",
+    "hours": 8,
+    "avg_temp_c": 19.6,
+    "max_temp_c": 21.0,
+    "risk_kwh": 0.1289107777064961
+   },
+   {
+    "kind": "chiller",
+    "unit": 3,
+    "job": 1,
+    "start": "2024-02-12 07:00",
+    "hours": 8,
+    "avg_temp_c": 20.0,
+    "max_temp_c": 24.0,
+    "risk_kwh": 0.13049757222704406
+   },
+   {
+    "kind": "chiller",
+    "unit": 1,
+    "job": 2,
+    "start": "2024-12-23 07:00",
+    "hours": 8,
+    "avg_temp_c": 20.1,
+    "max_temp_c": 25.0,
+    "risk_kwh": 0.1307242571585509
+   },
+   {
+    "kind": "chiller",
+    "unit": 2,
+    "job": 2,
+    "start": "2024-12-22 07:00",
+    "hours": 8,
+    "avg_temp_c": 20.3,
+    "max_temp_c": 24.2,
+    "risk_kwh": 0.13149498592567418
+   },
+   {
+    "kind": "chiller",
+    "unit": 3,
+    "job": 2,
+    "start": "2024-12-21 07:00",
+    "hours": 8,
+    "avg_temp_c": 20.8,
+    "max_temp_c": 25.0,
+    "risk_kwh": 0.1333991393503317
+   },
+   {
+    "kind": "chiller",
+    "unit": 1,
+    "job": 3,
+    "start": "2024-01-07 07:00",
+    "hours": 8,
+    "avg_temp_c": 21.5,
+    "max_temp_c": 25.0,
+    "risk_kwh": 0.13575666263800296
+   },
+   {
+    "kind": "chiller",
+    "unit": 2,
+    "job": 3,
+    "start": "2024-04-16 09:00",
+    "hours": 8,
+    "avg_temp_c": 21.4,
+    "max_temp_c": 23.3,
+    "risk_kwh": 0.13530329277498926
+   },
+   {
+    "kind": "chiller",
+    "unit": 3,
+    "job": 3,
+    "start": "2024-05-02 07:00",
+    "hours": 8,
+    "avg_temp_c": 24.1,
+    "max_temp_c": 25.6,
+    "risk_kwh": 0.1452353311311536
+   },
+   {
+    "kind": "chiller",
+    "unit": 1,
+    "job": 4,
+    "start": "2024-05-11 07:00",
+    "hours": 8,
+    "avg_temp_c": 29.4,
+    "max_temp_c": 33.0,
+    "risk_kwh": 0.16758322702156458
+   },
+   {
+    "kind": "chiller",
+    "unit": 2,
+    "job": 4,
+    "start": "2024-10-22 07:00",
+    "hours": 8,
+    "avg_temp_c": 32.5,
+    "max_temp_c": 36.3,
+    "risk_kwh": 0.18065485167909884
+   },
+   {
+    "kind": "chiller",
+    "unit": 3,
+    "job": 4,
+    "start": "2024-10-17 07:00",
+    "hours": 8,
+    "avg_temp_c": 33.0,
+    "max_temp_c": 35.0,
+    "risk_kwh": 0.18273873387087963
+   },
+   {
+    "kind": "crah",
+    "unit": 1,
+    "job": 1,
+    "start": "2024-01-01 07:00",
+    "hours": 4,
+    "avg_temp_c": 22.2,
+    "max_temp_c": 24.0,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 2,
+    "job": 1,
+    "start": "2024-01-02 07:00",
+    "hours": 4,
+    "avg_temp_c": 21.9,
+    "max_temp_c": 23.9,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 3,
+    "job": 1,
+    "start": "2024-01-03 07:00",
+    "hours": 4,
+    "avg_temp_c": 20.2,
+    "max_temp_c": 22.4,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 4,
+    "job": 1,
+    "start": "2024-01-03 11:00",
+    "hours": 4,
+    "avg_temp_c": 24.5,
+    "max_temp_c": 25.0,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 5,
+    "job": 1,
+    "start": "2024-01-04 07:00",
+    "hours": 4,
+    "avg_temp_c": 23.9,
+    "max_temp_c": 24.2,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 1,
+    "job": 2,
+    "start": "2024-03-01 07:00",
+    "hours": 4,
+    "avg_temp_c": 20.0,
+    "max_temp_c": 20.7,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 2,
+    "job": 2,
+    "start": "2024-03-02 07:00",
+    "hours": 4,
+    "avg_temp_c": 18.5,
+    "max_temp_c": 20.9,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 3,
+    "job": 2,
+    "start": "2024-03-03 07:00",
+    "hours": 4,
+    "avg_temp_c": 17.6,
+    "max_temp_c": 20.5,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 4,
+    "job": 2,
+    "start": "2024-03-03 11:00",
+    "hours": 4,
+    "avg_temp_c": 23.5,
+    "max_temp_c": 25.0,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 5,
+    "job": 2,
+    "start": "2024-03-04 07:00",
+    "hours": 4,
+    "avg_temp_c": 20.1,
+    "max_temp_c": 23.5,
+    "risk_kwh": 0.00916248977798442
+   }
+  ]
+ },
+ "Any month (60 days apart per unit), any time": {
+  "risk_kwh_per_year": 1.6683892056002632,
+  "reduction_vs_fixed": 0.24795834148515683,
+  "by_kind": {
+   "chiller": 1.576764307820419,
+   "crah": 0.0916248977798442
+  },
+  "avg_temp_c": 20.438235294117646,
+  "jobs": [
+   {
+    "kind": "chiller",
+    "unit": 1,
+    "job": 1,
+    "start": "2024-03-03 01:00",
+    "hours": 8,
+    "avg_temp_c": 16.5,
+    "max_temp_c": 17.8,
+    "risk_kwh": 0.11757653113115364
+   },
+   {
+    "kind": "chiller",
+    "unit": 2,
+    "job": 1,
+    "start": "2024-01-12 02:00",
+    "hours": 8,
+    "avg_temp_c": 16.7,
+    "max_temp_c": 18.0,
+    "risk_kwh": 0.1183925968845783
+   },
+   {
+    "kind": "chiller",
+    "unit": 3,
+    "job": 1,
+    "start": "2024-02-05 02:00",
+    "hours": 8,
+    "avg_temp_c": 16.7,
+    "max_temp_c": 19.0,
+    "risk_kwh": 0.11848327085718104
+   },
+   {
+    "kind": "chiller",
+    "unit": 1,
+    "job": 2,
+    "start": "2024-12-23 02:00",
+    "hours": 8,
+    "avg_temp_c": 16.8,
+    "max_temp_c": 18.0,
+    "risk_kwh": 0.11861928181608515
+   },
+   {
+    "kind": "chiller",
+    "unit": 2,
+    "job": 2,
+    "start": "2024-12-22 02:00",
+    "hours": 8,
+    "avg_temp_c": 16.9,
+    "max_temp_c": 18.0,
+    "risk_kwh": 0.11925399962430433
+   },
+   {
+    "kind": "chiller",
+    "unit": 3,
+    "job": 2,
+    "start": "2024-12-21 02:00",
+    "hours": 8,
+    "avg_temp_c": 17.8,
+    "max_temp_c": 19.5,
+    "risk_kwh": 0.12256359962430433
+   },
+   {
+    "kind": "chiller",
+    "unit": 1,
+    "job": 3,
+    "start": "2024-01-03 01:00",
+    "hours": 8,
+    "avg_temp_c": 20.2,
+    "max_temp_c": 21.7,
+    "risk_kwh": 0.13104161606266046
+   },
+   {
+    "kind": "chiller",
+    "unit": 2,
+    "job": 3,
+    "start": "2024-03-13 01:00",
+    "hours": 8,
+    "avg_temp_c": 19.5,
+    "max_temp_c": 21.0,
+    "risk_kwh": 0.12872942976129062
+   },
+   {
+    "kind": "chiller",
+    "unit": 3,
+    "job": 3,
+    "start": "2024-04-16 16:00",
+    "hours": 8,
+    "avg_temp_c": 20.7,
+    "max_temp_c": 21.3,
+    "risk_kwh": 0.1328550955147153
+   },
+   {
+    "kind": "chiller",
+    "unit": 1,
+    "job": 4,
+    "start": "2024-05-02 06:00",
+    "hours": 8,
+    "avg_temp_c": 24.1,
+    "max_temp_c": 25.6,
+    "risk_kwh": 0.1452353311311536
+   },
+   {
+    "kind": "chiller",
+    "unit": 2,
+    "job": 4,
+    "start": "2024-05-20 01:00",
+    "hours": 8,
+    "avg_temp_c": 27.0,
+    "max_temp_c": 28.2,
+    "risk_kwh": 0.1570375201722495
+   },
+   {
+    "kind": "chiller",
+    "unit": 3,
+    "job": 4,
+    "start": "2024-10-22 02:00",
+    "hours": 8,
+    "avg_temp_c": 29.3,
+    "max_temp_c": 30.0,
+    "risk_kwh": 0.16697603524074264
+   },
+   {
+    "kind": "crah",
+    "unit": 1,
+    "job": 1,
+    "start": "2024-01-01 04:00",
+    "hours": 4,
+    "avg_temp_c": 22.2,
+    "max_temp_c": 23.0,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 2,
+    "job": 1,
+    "start": "2024-01-01 23:00",
+    "hours": 4,
+    "avg_temp_c": 24.7,
+    "max_temp_c": 25.0,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 3,
+    "job": 1,
+    "start": "2024-01-02 03:00",
+    "hours": 4,
+    "avg_temp_c": 21.6,
+    "max_temp_c": 23.0,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 4,
+    "job": 1,
+    "start": "2024-01-02 07:00",
+    "hours": 4,
+    "avg_temp_c": 21.9,
+    "max_temp_c": 23.9,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 5,
+    "job": 1,
+    "start": "2024-01-02 18:00",
+    "hours": 4,
+    "avg_temp_c": 24.4,
+    "max_temp_c": 25.0,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 1,
+    "job": 2,
+    "start": "2024-03-01 04:00",
+    "hours": 4,
+    "avg_temp_c": 19.1,
+    "max_temp_c": 19.2,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 2,
+    "job": 2,
+    "start": "2024-03-01 23:00",
+    "hours": 4,
+    "avg_temp_c": 19.6,
+    "max_temp_c": 20.0,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 3,
+    "job": 2,
+    "start": "2024-03-02 03:00",
+    "hours": 4,
+    "avg_temp_c": 17.4,
+    "max_temp_c": 18.0,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 4,
+    "job": 2,
+    "start": "2024-03-02 07:00",
+    "hours": 4,
+    "avg_temp_c": 18.5,
+    "max_temp_c": 20.9,
+    "risk_kwh": 0.00916248977798442
+   },
+   {
+    "kind": "crah",
+    "unit": 5,
+    "job": 2,
+    "start": "2024-03-02 18:00",
+    "hours": 4,
+    "avg_temp_c": 21.1,
+    "max_temp_c": 22.0,
+    "risk_kwh": 0.00916248977798442
+   }
+  ]
+ }
+}
