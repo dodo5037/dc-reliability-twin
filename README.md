@@ -11,7 +11,7 @@ An educational model of a fictional 1 MW IT hall. **Not an engineering design.**
 | 3 | Maintenance-window optimizer: lowest-risk hours to take each unit offline, against a fixed monthly schedule (`twin/maintenance.py`) | Done |
 | 4 | Scenario lab: inlet temperature minute by minute after a failure (`twin/scenarios.py`) | Done |
 | 5 | Real telemetry from a home server | Next |
-| 6 | Automatic incident report | Planned |
+| 6 | Automatic incident report for any scenario that breaches a limit (`twin/rca.py`, examples in `reports/`) | Done |
 | 7 | Dashboard | Planned |
 
 ## Results so far (module 2)
@@ -66,6 +66,12 @@ Risk of a maintenance hour = chance that one of the remaining units fails in tha
 - **Redundancy does nothing against a shared failure.** N+1 and 2N give the same result when one fault stops every chiller.
 
 **Assumptions:** thermal mass 12,800 kJ/K; a standby unit cools 1 minute after a failure; a technician needs 12 minutes to find and fix a hidden fault; generators take load in 30 s; chillers restart in 5 min; fans, pumps and chillers are not on UPS; servers shut down at a 40 C inlet; a CRAH coil's capacity grows linearly with the gap between return air and chilled water.
+
+### Module 6: automatic incident report
+
+Any scenario that takes the inlet above 27 C, or loses IT power, produces a report in `reports/`: summary, impact table, timeline, five whys, contributing factors, corrective and preventive actions with an owner and a verification each. Example: [standby CRAH with a hidden fault](reports/crah_failure_n_1_standby_hidden_fault.md).
+
+The numbers and the timeline come from the simulation. The causes and actions come from a rule library with one entry per kind of event (six so far). It is a template filled with data, not a diagnosis, and every report is marked hypothetical.
 
 **Failure data:** US Army TM 5-698-5 (22 July 2006), Appendix B: chiller H10-000 (0.1182 failures a year, 12.62 h repair, p. B-4), air handling unit H5-000 (0.0110, 2.36 h, p. B-2), standby diesel generator E18-122 (0.1235, 18.28 h, p. B-6), UPS E39-200 (0.00938, 2.00 h, p. B-12), automatic transfer switch E34-100 (0.05117, 4.10 h, p. B-9). **Utility:** DEWA reports 0.94 customer minutes lost per customer in 2024 (DEWA Integrated Report 2024).
 

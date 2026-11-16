@@ -40,6 +40,7 @@ class Outcome:
     minutes_above_32: float = 0.0
     it_lost: bool = False
     it_shutdown_minute: float = None
+    kind: str = ""                 # cause tag used by the incident-report generator
 
 
 def simulate(f: Facility, name, outdoor_c, events, duration_min=45):
@@ -96,7 +97,9 @@ def crah_failure(design="N+1", outdoor_c=46.0, standby_works=True):
     else:
         ev.append(Event(2 + OPERATOR_FIX_MIN + 18, "Unit repaired and returned to service", crahs_up=n))
     label = "works" if standby_works else "hidden fault"
-    return simulate(f, f"CRAH failure, {design}" + (f", standby {label}" if inst > n else ", no standby"), outdoor_c, ev)
+    o = simulate(f, f"CRAH failure, {design}" + (f", standby {label}" if inst > n else ", no standby"), outdoor_c, ev)
+    o.kind = "crah_no_standby" if inst <= n else ("crah_standby_ok" if standby_works else "crah_hidden_fault")
+    return o
 
 
 def utility_loss(design="N+1", outdoor_c=46.0, buffer_min=0.0):
@@ -121,7 +124,9 @@ def utility_loss(design="N+1", outdoor_c=46.0, buffer_min=0.0):
         ev.append(Event(2 + g, f"Only {started} generator starts: {started * f.generators.unit_kw:.0f} kW cannot carry {f.facility_kw(outdoor_c):.0f} kW"))
         ev.append(Event(2 + f.ups_battery_min, "UPS battery exhausted. IT load loses power", it_powered=False))
     tank = f", {buffer_min:g} min chilled-water tank" if buffer_min else ""
-    return simulate(f, f"Utility loss + one generator fails, {design}{tank}", outdoor_c, ev)
+    o = simulate(f, f"Utility loss + one generator fails, {design}{tank}", outdoor_c, ev)
+    o.kind = "utility_too_few_generators" if not enough else ("utility_no_storage" if o.it_shutdown_minute is not None else "utility_ride_through")
+    return o
 
 
 def common_mode(design="2N", outdoor_c=46.0, fix_min=10.0):
@@ -130,7 +135,9 @@ def common_mode(design="2N", outdoor_c=46.0, fix_min=10.0):
     ev = [Event(2, "Shared control fault trips ALL chillers together", plant_running=False),
           Event(2 + fix_min, "Fault cleared by the operator; chillers restarting"),
           Event(2 + fix_min + f.chiller_restart_min, "Chillers back and cooling", plant_running=True)]
-    return simulate(f, f"Common-mode chiller trip, {design}", outdoor_c, ev)
+    o = simulate(f, f"Common-mode chiller trip, {design}", outdoor_c, ev)
+    o.kind = "common_mode"
+    return o
 
 
 def run_all():
