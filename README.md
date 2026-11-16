@@ -10,9 +10,9 @@ An educational model of a fictional 1 MW IT hall. **Not an engineering design.**
 | 2 | Reliability engine: Monte Carlo of failures and repairs, checked against the analytical answer (`twin/reliability.py`) | Done |
 | 3 | Maintenance-window optimizer: lowest-risk hours to take each unit offline, against a fixed monthly schedule (`twin/maintenance.py`) | Done |
 | 4 | Scenario lab: inlet temperature minute by minute after a failure (`twin/scenarios.py`) | Done |
-| 5 | Real telemetry from a home server | Next |
+| 5 | Real telemetry from a home server | Not started (waiting for server details) |
 | 6 | Automatic incident report for any scenario that breaches a limit (`twin/rca.py`, examples in `reports/`) | Done |
-| 7 | Dashboard | Planned |
+| 7 | Dashboard: Streamlit app over all modules (`app.py`) | Done |
 
 ## Results so far (module 2)
 
@@ -80,7 +80,9 @@ The numbers and the timeline come from the simulation. The causes and actions co
 Weather: NOAA Integrated Surface Database, Dubai International Airport, 2024, hourly. The cooling physics is reused from [dubai-datacenter-cooling](https://github.com/dodo5037/dubai-datacenter-cooling).
 
 ```bash
-python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt && python -m pytest -q
+python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
+python -m pytest -q          # 38 tests
+streamlit run app.py         # dashboard on http://localhost:8501
 ```
 
 Author: Abderrahmane Messaoudi, Industrial Engineering & Engineering Management, University of Sharjah
