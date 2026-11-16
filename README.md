@@ -35,7 +35,7 @@ flowchart TD
 | 2 | Reliability engine | `twin/reliability.py` | Done |
 | 3 | Maintenance-window optimizer | `twin/maintenance.py` | Done |
 | 4 | Scenario lab | `twin/scenarios.py` | Done |
-| 5 | Real telemetry from a home server | | **Not built** |
+| 5 | Real telemetry from a home server | `telemetry/collector.py`, `twin/telemetry.py`, [docs/TELEMETRY.md](docs/TELEMETRY.md) | Code done; **no real data collected yet** |
 | 6 | Automatic incident report | `twin/rca.py`, examples in `reports/` | Done |
 | 7 | Dashboard | `app.py` | Done |
 
@@ -124,12 +124,13 @@ Everything below is an assumption, not a measurement or a vendor figure. All are
 | Scenarios | Technician finds and fixes a hidden fault | 12 minutes |
 | Unit sizes | Chillers 700 kW, CRAH 300 kW, UPS 600 kW, generators 800 kW | sized so N units carry the hottest hour |
 
-## Tests (38)
+## Tests (45)
 
 - **Physics:** heat balance for air and water, cooling load = all electricity in the hall plus outside gain, the chiller model reproduces its rating point, temperature rise = heat / thermal mass, units.
 - **Reliability maths:** availability = MTBF / (MTBF + MTTR); "at least k of n" by hand; Monte Carlo against the exact formula for N, and for N+1 using deliberately unreliable test units so that double failures are frequent enough to count.
 - **Optimizer:** every optimized schedule beats the fixed one; no two units of a kind offline together; day-shift and same-month rules hold; the method matches a brute-force search on a small case.
 - **Scenarios, reports, dashboard:** no report without a breach; report numbers equal simulation numbers; the dashboard starts without an error.
+- **Telemetry:** the collector reads a fake sensor tree, drops nonsense values and records nothing that identifies the machine; the fit recovers a known relationship and flags an injected spike. These use made-up test readings.
 
 ## Limits
 
@@ -140,13 +141,13 @@ Everything below is an assumption, not a measurement or a vendor figure. All are
 - **One lumped temperature** for the whole hall: no hot spots, no airflow, no humidity.
 - **One year of weather**, and the maintenance optimizer sees it in hindsight.
 - **Constant IT load.**
-- **Module 5 (real telemetry) is not built**, so nothing here has been checked against real hardware.
+- **Module 5 has code but no data yet.** The collector and the thermal-model fit are tested only on made-up test readings. Nothing here has been checked against real hardware until readings are collected.
 
 ## Run it
 
 ```bash
 python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
-python -m pytest -q                 # 38 tests
+python -m pytest -q                 # 45 tests
 python -m twin.reliability          # Monte Carlo, about 2 seconds for 200,000 years per design
 python -m twin.maintenance          # schedules
 python -m twin.scenarios            # scenario table

@@ -5,7 +5,7 @@ import os
 import pandas as pd
 import streamlit as st
 
-from twin import cooling, maintenance, rca, reliability, scenarios
+from twin import cooling, maintenance, rca, reliability, scenarios, telemetry
 from twin.facility import DESIGNS, Facility
 
 st.set_page_config(page_title="Dubai Data Center Reliability Twin", layout="wide")
@@ -128,8 +128,21 @@ with tabs[4]:
 
 # ------------------------------------------------------------------ Telemetry
 with tabs[5]:
-    path = "telemetry/data/readings.csv"
-    if os.path.exists(path):
-        st.dataframe(pd.read_csv(path).tail(200), use_container_width=True)
+    fits = telemetry.summary("telemetry/data/readings.csv")
+    if not fits:
+        st.info("No readings yet. Run telemetry/collector.py on the server for a few days and copy its CSV to "
+                "telemetry/data/readings.csv (see docs/TELEMETRY.md). This tab then fits a thermal model to every "
+                "temperature sensor and lists anomalies.")
     else:
-        st.info("Module 5 (real telemetry from a home server) is not built yet. No data has been collected.")
+        st.markdown("Real readings from a home server. Model for each sensor: temperature = a + b × CPU load, fitted by least squares. "
+                    "An anomaly is a reading more than 4 robust standard deviations from the model.")
+        st.dataframe(pd.DataFrame([{"Sensor": k, "Readings": v["n"], "Idle temperature (°C)": round(v["intercept"], 1),
+                                    "°C per 10% CPU load": round(10 * v["per_load_pct"], 2), "R²": round(v["r2"], 2),
+                                    "Anomalies": len(v["anomalies"])} for k, v in fits.items()]), hide_index=True, use_container_width=True)
+        which = st.selectbox("Sensor", list(fits))
+        v = fits[which]
+        st.line_chart(pd.DataFrame({"Measured °C": v["measured"], "Expected from load °C": v["expected"]}, index=pd.to_datetime(v["times"])))
+        if v["anomalies"]:
+            st.dataframe(pd.DataFrame(v["anomalies"]), hide_index=True, use_container_width=True)
+        else:
+            st.success("No anomalies for this sensor.")
